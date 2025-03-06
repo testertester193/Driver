@@ -32,9 +32,6 @@ app.layout = html.Div(style={'backgroundColor': '#2E2E2E', 'minHeight': '100vh',
                     html.Img(src="/assets/logo.png", style={"height": "50px"})
                 ], style={"flex": "1", "textAlign": "left"}),
                 html.Div([
-                    html.Span("Driver Dashboard", className="brand-logo", style={"fontSize": "24px", "fontWeight": "bold", "color": "white"})
-                ], style={"flex": "1", "textAlign": "center"}),
-                html.Div([
                     html.Ul([
                         html.Li(html.A("Logout", id="user-menu", className="waves-effect waves-light btn red darken-3", style={"display": "none"}))
                     ], className="right")
