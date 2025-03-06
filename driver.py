@@ -24,16 +24,22 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets, suppress_ca
 server = app.server
 
 app.layout = html.Div(style={'backgroundColor': '#2E2E2E', 'minHeight': '100vh', 'padding': '20px'}, children=[
-    # Header Section with Logo
+     # Header Section with Logo
     html.Div([
         html.Nav([
             html.Div([
-                html.Img(src="/assets/logo.png", style={"height": "50px", "marginRight": "10px"}),
-                html.Span("Driver Dashboard", className="brand-logo")
-            ], className="left", style={"display": "flex", "alignItems": "center"}),
-            html.Ul([
-                html.Li(html.A("Logout", id="user-menu", className="waves-effect waves-light btn red darken-3", style={"display": "none"}))
-            ], className="right")
+                html.Div([
+                    html.Img(src="/assets/logo.png", style={"height": "50px"})
+                ], style={"flex": "1", "textAlign": "left"}),
+                html.Div([
+                    html.Span("Driver Dashboard", className="brand-logo", style={"fontSize": "24px", "fontWeight": "bold", "color": "white"})
+                ], style={"flex": "1", "textAlign": "center"}),
+                html.Div([
+                    html.Ul([
+                        html.Li(html.A("Logout", id="user-menu", className="waves-effect waves-light btn red darken-3", style={"display": "none"}))
+                    ], className="right")
+                ], style={"flex": "1", "textAlign": "right"})
+            ], style={"display": "flex", "alignItems": "center", "width": "100%"})
         ], className="nav-wrapper blue darken-3")
     ], className="container"),
     
